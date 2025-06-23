@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+
+	<title>Student FOUR Registrations</title>
+	<style>
+.error {
+	color: red
+}
+</style>
+</h:head>
+
+<h:body>
+
+	<h:form>
+
+	First Name: <h:inputText value="#{studentFour.firstName}"
+			label="First Name" id="First_name" />
+
+		<br />
+		<br />
+		
+	Last Name: <h:inputText value="#{studentFour.lastName}"
+			label="Last Name" id="Last_name" />
+
+		<br />
+		<br />
+		
+	Course Code: <h:inputText value="#{studentFour.courseCode}"
+							label="Course Code"
+							id="Course_code"
+							validator="#{studentFour.validateCourseCode}">
+    
+</h:inputText>
+
+<h:message for="Course_code" styleClass="error" />
+		
+		<br /><br />
+		<h:commandButton value="Submit" action="student_four_response" />
+
+	</h:form>
+
+</h:body>
+
+</html>
